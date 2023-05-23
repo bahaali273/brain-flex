@@ -1,4 +1,3 @@
-
 import avatar from '../../assets/Images/Mohan-muruge.jpg';
  import logo from '../../assets/Images/Logo/BrainFlix-logo.svg';
 import '../PageHeader/PageHeader.scss';

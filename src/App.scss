@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display: block;
 }
 
 .App-logo {
@@ -37,14 +38,11 @@
   }
 }
 
-
-// SCSS imports for Pages
-@use "./pages/Home/Home.scss" as *;
-* {
-    box-sizing: border-box;
-    text-decoration: none;
-}
-
-body {
-    margin: 0;
+.video-container {
+  display: flex;
+  // justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  // margin: 0 auto;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import avatar from '../../assets/Images/Mohan-muruge.jpg';
 
-import '../NewCommentForm/NewCommentForm.scss'
+import './NewCommentForm.scss'
 const NewCommentForm = ({ addComment }) => {
   const [commentText, setCommentText] = useState('');
 

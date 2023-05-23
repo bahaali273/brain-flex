@@ -1,22 +1,3 @@
-// import React from "react";
-// // import '../VideoPlayer/VideoPlayer.scss';
-// import "../../Components/VideoPlayer/VideoPlayer.scss";
-// // import NextVideo from "../NextVideo/NextVideo";
-// // import videosData from "../../../src/assets/Data/videos.json";
-
-// function VideoPlayer({ currentVideo, handleVideoChange2 }) {
-//   return (
-//     <section className="video">
-//         <video className="video__player" src="" controls poster={currentVideo.image}></video>
-//       <div className="video__wrapper">
-      
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default VideoPlayer;
-
 import React from "react";
 import "../VideoPlayer/VideoPlayer.scss";
  import viewsIcon from "../../assets/Icons/views.svg";
@@ -38,7 +19,6 @@ function VideoPlayer({ currentVideo }) {
               <p className="vid-details__info-left--by-info">{currentVideo.channel}</p>
             </div>
             <div className="vid-details__info-left--date">
-              {/* <p className="vid-details__info-left--date-info">{currentVideo.comments}</p> */}
             </div>
             <div className="vid-details__info-right">
             <div className="vid-details__info-right--views">
@@ -74,8 +54,6 @@ function VideoPlayer({ currentVideo }) {
 
 
         </section>
-      {/* <h2>{currentVideo.title}</h2> */}
-        {/* <p>{currentVideo.description}</p> */}
     </section>
 
 
