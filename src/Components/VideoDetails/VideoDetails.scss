@@ -1,0 +1,167 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/reset" as *;
+
+
+.vid-details {
+    margin: 1.5rem 1rem 1rem 1rem;
+
+    @include tablet {
+        margin-inline: 1.5rem
+    }
+
+    @include desktop {
+        margin-right: 0;
+    }
+
+    &__wrapper {
+        margin-left: auto;
+    }
+
+    &__title {
+        @include m-page-header;
+        font-weight: 700;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $mercury;
+
+        @include tablet {
+            @include dt-page-header;
+            border: none;
+            padding: none;
+        }
+    }
+
+    &__info-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 1rem 0;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid $mercury;
+
+        @include tablet {
+            margin: 0;
+            padding: 0;
+        }
+
+        @include desktop {
+            padding-right: 1.5rem;
+            width: 100%;
+        }
+    }
+
+    &__info-left {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+
+        @include tablet {
+            flex-direction: row;
+        }
+
+        &--by {
+            margin-bottom: 1rem;
+
+            @include tablet {
+                margin-right: 1.5rem;
+                margin-bottom: 0
+            }
+        }
+
+        &--by-info {
+            @include m-body;
+            font-weight: 700;
+            color: $black;
+
+            @include tablet {
+                @include dt-body;
+                font-weight: 700;
+            }
+        }
+
+        &--date {}
+
+        &--date-info {
+            @include m-body;
+            color: $silver;
+
+            @include tablet {
+                @include dt-body;
+            }
+        }
+    }
+
+    &__info-right {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        color: $silver;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        &--views {
+            display: flex;
+            margin-bottom: 1rem;
+        }
+
+        &--views-icon {
+            margin-inline: .125rem;
+            padding-right: .25rem;
+        }
+
+        &--views-info {
+            @include m-body;
+
+            @include tablet {
+                @include dt-body;
+            }
+        }
+
+        &--likes {
+            display: flex;
+
+            @include tablet {
+                margin-left: 1.5rem;
+            }
+        }
+
+        &--likes-icon {
+            margin-inline: .28125rem;
+            padding-right: .25rem;
+
+            @include tablet {
+                height: 1.375rem
+            }
+        }
+
+        &--likes-info {
+            @include m-body;
+
+            @include tablet {
+                @include dt-body;
+            }
+        }
+
+    }
+
+    &__description-section {
+        @include tablet {
+            padding-top: 1.5rem;
+        }
+
+        @include desktop {
+            padding-right: 1.5rem;
+        }
+    }
+
+    &__description {
+        @include m-body;
+
+        @include tablet {
+            @include dt-body;
+        }
+    }
+}
