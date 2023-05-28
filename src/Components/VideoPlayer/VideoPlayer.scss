@@ -24,6 +24,12 @@
     }
 }
 
+
+.new-section{
+    display: flex;
+}
+
+
 .vid-details {
     margin: 1.5rem 1rem 1rem 1rem;
 
@@ -116,6 +122,7 @@
         flex-direction: column;
         width: 50%;
         color: $silver;
+        
 
         @include tablet {
             flex-direction: row;
@@ -169,7 +176,10 @@
 
     &__description-section {
         @include tablet {
+            display: flex;
             padding-top: 1.5rem;
+            padding-left: 8rem;
+            padding-right: 2rem;
         }
 
         @include desktop {

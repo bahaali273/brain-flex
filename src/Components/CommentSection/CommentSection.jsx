@@ -1,33 +1,38 @@
-import React from 'react';
-import NewCommentForm from '../NewCommentForm/NewCommentForm';
-import Comments from '../Comments/Comments';
-import '../NewCommentForm/NewCommentForm.scss';
-import './CommentSection.scss';
-import '../Comments/Comments.scss';
+import NewCommentForm from "../NewCommentForm/NewCommentForm";
+import "../NewCommentForm/NewCommentForm.scss";
+import "./CommentSection.scss";
 
-function CommentSection({ activeVideoId, currentVideo }) {
-  const numberOfComments = currentVideo.comments.length;
+import Comments from "../Comments/Comments";
+import "../Comments/Comments.scss";
 
-  return (
-    <section className='comment-section'>
-      <div className='comment-section__heading'>
-        <h5 className='comment-section__comment-counter'>{numberOfComments} Comments</h5>
-      </div>
-      <NewCommentForm activeVideoId={activeVideoId} />
-      <div className='comment__container'>
-        {currentVideo.comments.map((comment) => (
-          <Comments
-            key={comment.id}
-            name={comment.name}
-            timestamp={comment.timestamp}
-            comment={comment.comment}
-            activeVideoId={activeVideoId}
-            commentId={comment.id}
-          />
-        ))}
-      </div>
-    </section>
-  );
+function CommentSection({ commentData, api_url, activeVideoId }) {
+    const numberOfComments = commentData?.length;
+
+    return (
+        <section className="comment-section-outer">
+        <section className="comment-section">
+            <div className="comment-section__heading">
+                <h5 className="comment-section__comment-counter">
+                    {numberOfComments} Comments
+                </h5>
+            </div>
+            </section>
+            <NewCommentForm api_url={api_url} activeVideoId={activeVideoId} />
+            <div className="comment__container">
+                {commentData?.map((comment) => (
+                    <Comments
+                        key={comment.id}
+                        name={comment.name}
+                        timestamp={comment.timestamp}
+                        comment={comment.comment}
+                        api_url={api_url}
+                        activeVideoId={activeVideoId}
+                        commentId={comment.id}
+                    />
+                ))}
+            </div>
+        </section>
+    );
 }
 
 export default CommentSection;

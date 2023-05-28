@@ -127,17 +127,18 @@
         color: $white;
         @include m-label-btn;
         border: 0;
+        text-decoration: none;
 
         @include tablet {
             width: 10.75rem;
             @include dt-label-btn;
         }
 
-        &::placeholder {
-            text-align: center;
-            margin: 0.5rem;
-            text-decoration: none;
-        }
+        // &::placeholder {
+        //     text-align: center;
+        //     margin: 0.5rem;
+        //     text-decoration: none;
+        // }
 
         &:hover {
             background-color: $darkblue;

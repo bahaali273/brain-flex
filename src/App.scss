@@ -23,6 +23,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+ 
 }
 
 .App-link {
@@ -39,6 +40,7 @@
 }
 
 .video-container {
+  border-right: 1px maroon;
   display: flex;
   // justify-content: space-between;
   align-items: flex-start;
