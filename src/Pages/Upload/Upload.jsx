@@ -13,7 +13,7 @@ export default function Upload() {
         event.preventDefault();
         const newVideo = {
             title: event.target.title.value,
-            desc: event.target.desc.value,
+            desc: event.target.desc.value,//description 
         };
         if (newVideo.title && newVideo.desc) {
             alert("Your video has been published to BrainFlix");
