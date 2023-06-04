@@ -4,6 +4,9 @@ import viewsIcon from "../../assets/Icons/views.svg";
 import likesIcon from "../../assets/Icons/likes.svg";
 
 function VideoPlayer({ activeVideo }) {
+    console.log("video player component")
+    console.log(activeVideo)
+    console.log(activeVideo.image)
     return (
         <section className="video">
             <div className="video__wrapper">

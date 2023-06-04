@@ -8,7 +8,7 @@ import CommentSection from "../../Components/CommentSection/CommentSection";
 import NextVideoSection from "../../Components/NextVideoSection/NextVideoSection";
 import PageNotFound from "../PageNotFound/PageNotFound";
 
-const api_url = "https://project-2-api.herokuapp.com";
+const api_url = "http://localhost:5001";
 const apiKey = `0a56ac57-bab8-430a-9688-ee61d17553c0`;
 
 export default function Home() {
@@ -19,8 +19,9 @@ export default function Home() {
 
     function getVideoListData() {
         axios
-            .get(`${api_url}/videos?api_key=${apiKey}`)
+            .get(`${api_url}/videos`)
             .then((response) => {
+         
                 setNextVideoData(response.data);
                 setDefaultVideoId(response.data[0].id);
             })
@@ -39,8 +40,10 @@ export default function Home() {
 
     function getSingleVideo(videoID) {
         axios
-            .get(`${api_url}/videos/${videoID}?api_key=${apiKey}`)
+            .get(`${api_url}/videos/${videoID}`)
             .then((response) => {
+                // console.log("Bahaaa")
+                // console.log(response.data)
                 setActiveVideo(response.data);
             })
             .catch((error) => {
@@ -50,22 +53,22 @@ export default function Home() {
 
     useEffect(() => {
         getVideoListData();
-        console.log(nextVideoData);
+        // console.log(nextVideoData);
     }, []);
 
     useEffect(() => {
         if (id) {
-            console.log("id", id);
+            // console.log("id", id);
             getSingleVideo(id);
         } else if (defaultVideoId) {
-            console.log("def ", defaultVideoId);
+            // console.log("def ", defaultVideoId);
             getSingleVideo(defaultVideoId);
         }
     }, [id, nextVideoData]);
 
-    console.log("HERE");
-    console.log(nextVideoData);
-    console.log(activeVideo);
+    // console.log("HERE");
+    // console.log(nextVideoData);
+    // console.log(activeVideo);
 
     return activeVideo && nextVideoData ? (
         <>
